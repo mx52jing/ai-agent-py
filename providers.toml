@@ -1,0 +1,31 @@
+# 模型来源配置。不含密钥和中转站地址：它们放在 .env，这里只写对应的环境变量名。
+# （地址也可以不走环境变量，直接写 base_url = "https://..."）
+#
+# 切换来源：LLM_PROFILE=claude-relay uv run examples/01_basic_call/01_hello.py
+# 临时换模型：LLM_MODEL=deepseek-chat uv run examples/01_basic_call/01_hello.py
+# 不确定模型名：uv run examples/00_setup_check/main.py 会列出中转站支持的模型
+
+default = "openai-relay"
+
+# 中转站的 OpenAI 规范接口（Chat Completions）。GPT / DeepSeek / Grok 等都走这里。
+[profiles.openai-relay]
+kind = "openai-compatible"
+base_url_env = "OPENAI_RELAY_BASE_URL" # 地址写在 .env 里，通常以 /v1 结尾
+api_key_env = "OPENAI_RELAY_API_KEY"
+model = "gpt-6.2-sol" # TODO 改成中转站支持的模型名
+# 模型名不是 "vendor/model" 形式、且不是 GPT 系列时，指明模型家族，
+# 可选：openai / anthropic / deepseek / grok / google
+# family = "deepseek"
+
+# 中转站的 Claude 规范接口（Anthropic Messages）。
+[profiles.claude-relay]
+kind = "anthropic-compatible"
+base_url_env = "CLAUDE_RELAY_BASE_URL" # 地址写在 .env 里，通常不带 /v1
+api_key_env = "CLAUDE_RELAY_API_KEY"
+model = "claude-sonnet-5-5" # TODO 改成中转站支持的模型名
+
+# 官方 API 示例（有官方 Key 时取消注释；密钥用各家默认的环境变量名，如 DEEPSEEK_API_KEY）
+# [profiles.deepseek]
+# kind = "official"
+# provider = "deepseek"
+# model = "deepseek-chat"
