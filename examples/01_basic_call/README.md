@@ -510,4 +510,4 @@ result.conversation           # 传给下一次 run
 
 ---
 
-下一章：`02_streaming`（详解待写）
+下一章：[02 流式输出](../02_streaming/README.md)

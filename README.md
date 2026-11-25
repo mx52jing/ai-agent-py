@@ -33,7 +33,7 @@ LLM_MODEL=deepseek-chat uv run examples/01_basic_call/01_hello.py    # 临时换
 | `src/agentkit/` | 共享包：读取配置、按 profile 创建模型、终端输出。只做这三件事 | |
 | `examples/00_setup_check/` | 连通性检查 | |
 | `examples/01_basic_call/` | 同步 / 异步调用、指令与模型参数、多轮对话 | [01 基础调用](examples/01_basic_call/README.md) |
-| `examples/02_streaming/` | 流式文本、完整事件流、流式多轮聊天 | 待写 |
+| `examples/02_streaming/` | 流式文本、完整事件流、流式多轮聊天 | [02 流式输出](examples/02_streaming/README.md) |
 | `examples/03_structured_output/` | pydantic 输出、三种输出模式、校验与重试、流式结构化输出 | 待写 |
 
 约定：示例之间互不 import；示例里不写密钥、地址和模型名，一律用 `get_model()`。每章的详解放在该章目录下的 `README.md`。
