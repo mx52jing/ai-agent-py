@@ -465,4 +465,4 @@ async with agent.run_stream_events("问题", conversation=conversation) as event
 
 ---
 
-上一章：[01 基础调用](../01_basic_call/README.md) ｜ 下一章：`03_structured_output`（详解待写）
+上一章：[01 基础调用](../01_basic_call/README.md) ｜ 下一章：[03 结构化输出](../03_structured_output/README.md)
