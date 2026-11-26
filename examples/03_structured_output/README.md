@@ -743,4 +743,4 @@ async with agent.run_stream("…", output_type=Article) as response:
 
 ---
 
-上一章：[02 流式输出](../02_streaming/README.md)
+上一章：[02 流式输出](../02_streaming/README.md) ｜ 下一章：[04 工具与依赖注入](../04_tools_and_deps/README.md)

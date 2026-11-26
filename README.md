@@ -35,6 +35,7 @@ LLM_MODEL=deepseek-chat uv run examples/01_basic_call/01_hello.py    # 临时换
 | `examples/01_basic_call/` | 同步 / 异步调用、指令与模型参数、多轮对话 | [01 基础调用](examples/01_basic_call/README.md) |
 | `examples/02_streaming/` | 流式文本、完整事件流、流式多轮聊天 | [02 流式输出](examples/02_streaming/README.md) |
 | `examples/03_structured_output/` | pydantic 输出、三种输出模式、校验与重试、流式结构化输出 | [03 结构化输出](examples/03_structured_output/README.md) |
+| `examples/04_tools_and_deps/` | 函数工具、工具 schema、依赖注入、工具出错与重试、流式工具事件 | [04 工具与依赖注入](examples/04_tools_and_deps/README.md) |
 
 约定：示例之间互不 import；示例里不写密钥、地址和模型名，一律用 `get_model()`。每章的详解放在该章目录下的 `README.md`。
 
