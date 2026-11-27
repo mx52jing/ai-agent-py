@@ -36,8 +36,9 @@ LLM_MODEL=deepseek-chat uv run examples/01_basic_call/01_hello.py    # 临时换
 | `examples/02_streaming/` | 流式文本、完整事件流、流式多轮聊天 | [02 流式输出](examples/02_streaming/README.md) |
 | `examples/03_structured_output/` | pydantic 输出、三种输出模式、校验与重试、流式结构化输出 | [03 结构化输出](examples/03_structured_output/README.md) |
 | `examples/04_tools_and_deps/` | 函数工具、工具 schema、依赖注入、工具出错与重试、流式工具事件 | [04 工具与依赖注入](examples/04_tools_and_deps/README.md) |
+| `examples/05_mcp_skill/` | MCP 与 Skill（更新中），按篇拆成多个文档 | [01 什么是 MCP](examples/05_mcp_skill/01_what_is_mcp.md)、[02 Streamable HTTP 详解](examples/05_mcp_skill/02_streamable_http.md)、[03 手写 Streamable HTTP](examples/05_mcp_skill/03_streamableHttp_impl.md) |
 
-约定：示例之间互不 import；示例里不写密钥、地址和模型名，一律用 `get_model()`。每章的详解放在该章目录下的 `README.md`。
+约定：示例之间互不 import；示例里不写密钥、地址和模型名，一律用 `get_model()`。每章的详解放在该章目录下的 `README.md`；05 内容较多，按 `01_xxx.md`、`02_xxx.md` 拆成多篇。
 
 ## 模型来源
 
